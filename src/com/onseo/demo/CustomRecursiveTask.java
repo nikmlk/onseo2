@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.RecursiveTask;
 
+import static com.onseo.demo.ListUtil.sum;
+
 public class CustomRecursiveTask extends RecursiveTask<List<Integer>> {
     private List<Integer> newList;
     private List<Integer> oldList;
@@ -47,10 +49,6 @@ public class CustomRecursiveTask extends RecursiveTask<List<Integer>> {
         }
 
         return max;
-    }
-
-    private int sum(List<Integer> array) {
-        return array.stream().mapToInt(value -> value).sum();
     }
 
 }
