@@ -42,9 +42,9 @@ public class CustomRecursiveTask extends RecursiveTask<List<Integer>> {
 
         List<Integer> max = new ArrayList<>();
         for (int i = 0; i < subTasks.size(); i++) {
-            List<Integer> array = subTasks.get(i).join();
-            if (sum(max) < sum(array)){
-                max = array;
+            List<Integer> otherCombination = subTasks.get(i).join();
+            if (sum(max) < sum(otherCombination)){
+                max = otherCombination;
             }
         }
 
